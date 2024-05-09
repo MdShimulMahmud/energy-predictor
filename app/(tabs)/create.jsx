@@ -158,7 +158,7 @@ const Create = () => {
         </View>
 
         <FormField
-          title="Topic Covered"
+          title="Details of Video"
           value={form.prompt}
           placeholder="The topic covered of your video...."
           handleChangeText={(e) => setForm({ ...form, prompt: e })}
