@@ -1,7 +1,7 @@
-import { useEffect } from "react";
 import { useFonts } from "expo-font";
-import "react-native-url-polyfill/auto";
 import { SplashScreen, Stack } from "expo-router";
+import { useEffect } from "react";
+import "react-native-url-polyfill/auto";
 
 import GlobalProvider from "../context/GlobalProvider";
 

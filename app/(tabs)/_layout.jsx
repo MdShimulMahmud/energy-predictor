@@ -1,9 +1,9 @@
-import { StatusBar } from "expo-status-bar";
 import { Redirect, Tabs } from "expo-router";
+import { StatusBar } from "expo-status-bar";
 import { Image, Text, View } from "react-native";
 
-import { icons } from "../../constants";
 import { Loader } from "../../components";
+import { icons } from "../../constants";
 import { useGlobalContext } from "../../context/GlobalProvider";
 
 const TabIcon = ({ icon, color, name, focused }) => {
@@ -61,15 +61,15 @@ const TabLayout = () => {
           }}
         />
         <Tabs.Screen
-          name="bookmark"
+          name="predict"
           options={{
-            title: "Bookmark",
+            title: "Predict",
             headerShown: false,
             tabBarIcon: ({ color, focused }) => (
               <TabIcon
                 icon={icons.bookmark}
                 color={color}
-                name="Bookmark"
+                name="Predict"
                 focused={focused}
               />
             ),

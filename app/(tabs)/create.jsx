@@ -158,9 +158,9 @@ const Create = () => {
         </View>
 
         <FormField
-          title="AI Prompt"
+          title="Topic Covered"
           value={form.prompt}
-          placeholder="The AI prompt of your video...."
+          placeholder="The topic covered of your video...."
           handleChangeText={(e) => setForm({ ...form, prompt: e })}
           otherStyles="mt-7"
         />

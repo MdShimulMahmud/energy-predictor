@@ -1,10 +1,10 @@
-import { StatusBar } from "expo-status-bar";
 import { Redirect, router } from "expo-router";
-import { View, Text, Image, ScrollView } from "react-native";
+import { StatusBar } from "expo-status-bar";
+import { Image, ScrollView, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-import { images } from "../constants";
 import { CustomButton, Loader } from "../components";
+import { images } from "../constants";
 import { useGlobalContext } from "../context/GlobalProvider";
 
 const Welcome = () => {
@@ -22,14 +22,14 @@ const Welcome = () => {
         }}
       >
         <View className="w-full flex justify-center items-center h-full px-4">
-          <Image
-            source={images.logo}
+          {/* <Image
+            source={images.homeLogo}
             className="w-[130px] h-[84px]"
             resizeMode="contain"
-          />
+          /> */}
 
           <Image
-            source={images.cards}
+            source={images.homescreen}
             className="max-w-[380px] w-full h-[298px]"
             resizeMode="contain"
           />
@@ -37,20 +37,20 @@ const Welcome = () => {
           <View className="relative mt-5">
             <Text className="text-3xl text-white font-bold text-center">
               Discover Endless{"\n"}
-              Possibilities with{" "}
-              <Text className="text-secondary-200">Aora</Text>
+              Possibilities with {""}
+              <Text className="text-secondary-200">Predictor</Text>
             </Text>
 
             <Image
               source={images.path}
-              className="w-[136px] h-[15px] absolute -bottom-2 -right-8"
+              className="w-[236px] h-[15px] absolute -bottom-3 -right-2"
               resizeMode="contain"
             />
           </View>
 
           <Text className="text-sm font-pregular text-gray-100 mt-7 text-center">
             Where Creativity Meets Innovation: Embark on a Journey of Limitless
-            Exploration with Aora
+            Exploration with Predictor
           </Text>
 
           <CustomButton

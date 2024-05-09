@@ -1,12 +1,12 @@
-import { useState } from "react";
 import { Link, router } from "expo-router";
+import { useState } from "react";
+import { Alert, Dimensions, Image, ScrollView, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { View, Text, ScrollView, Dimensions, Alert, Image } from "react-native";
 
-import { images } from "../../constants";
-import { createUser } from "../../lib/appwrite";
 import { CustomButton, FormField } from "../../components";
+import { images } from "../../constants";
 import { useGlobalContext } from "../../context/GlobalProvider";
+import { createUser } from "../../lib/appwrite";
 
 const SignUp = () => {
   const { setUser, setIsLogged } = useGlobalContext();
@@ -47,13 +47,13 @@ const SignUp = () => {
           }}
         >
           <Image
-            source={images.logo}
+            source={images.home_logo}
             resizeMode="contain"
-            className="w-[115px] h-[34px]"
+            className="w-[110px] h-[100px] rounded-3xl self-left"
           />
 
-          <Text className="text-2xl font-semibold text-white mt-10 font-psemibold">
-            Sign Up to Aora
+          <Text className="text-2xl font-semibold text-white mt-2 font-psemibold">
+            Sign Up to Predictor
           </Text>
 
           <FormField
