@@ -28,7 +28,7 @@ const Home = () => {
   //  we cannot do that with just scrollview as there's both horizontal and vertical scroll (two flat lists, within trending)
 
   return (
-    <SafeAreaView className="bg-primary">
+    <SafeAreaView className="">
       <FlatList
         data={posts}
         keyExtractor={(item) => item.$id}
@@ -46,10 +46,8 @@ const Home = () => {
           <View className="flex my-6 px-4 space-y-6">
             <View className="flex justify-between items-start flex-row mb-6">
               <View>
-                <Text className="font-pmedium text-sm text-gray-100">
-                  Welcome Back
-                </Text>
-                <Text className="text-2xl font-psemibold mt-1 text-white">
+                <Text className="font-pmedium text-sm ">Welcome Back</Text>
+                <Text className="text-2xl font-psemibold mt-1 ">
                   {user?.username ?? "User"}
                 </Text>
               </View>
@@ -66,7 +64,7 @@ const Home = () => {
             <SearchInput />
 
             <View className="w-full flex-1 pt-5 pb-8">
-              <Text className="text-lg font-pregular text-gray-100 mb-3">
+              <Text className="text-lg font-pregular mb-3">
                 Latest Suggestions
               </Text>
 
@@ -76,8 +74,8 @@ const Home = () => {
         )}
         ListEmptyComponent={() => (
           <EmptyState
-            title="No Videos Found"
-            subtitle="No videos created yet"
+            title="No posts or Videos Found"
+            subtitle="No posts or videos created yet"
           />
         )}
         refreshControl={

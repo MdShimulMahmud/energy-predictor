@@ -1,6 +1,6 @@
-import { useState } from "react";
 import { router, usePathname } from "expo-router";
-import { View, TouchableOpacity, Image, TextInput, Alert } from "react-native";
+import { useState } from "react";
+import { Alert, Image, TextInput, TouchableOpacity, View } from "react-native";
 
 import { icons } from "../constants";
 
@@ -13,7 +13,7 @@ const SearchInput = ({ initialQuery }) => {
       <TextInput
         className="text-base mt-0.5 text-white flex-1 font-pregular"
         value={query}
-        placeholder="Search a video topic"
+        placeholder="Search a topic"
         placeholderTextColor="#CDCDE0"
         onChangeText={(e) => setQuery(e)}
       />

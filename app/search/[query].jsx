@@ -1,11 +1,11 @@
-import { useEffect } from "react";
 import { useLocalSearchParams } from "expo-router";
-import { View, Text, FlatList } from "react-native";
+import { useEffect } from "react";
+import { FlatList, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-import useAppwrite from "../../lib/useAppwrite";
-import { searchPosts } from "../../lib/appwrite";
 import { EmptyState, SearchInput, VideoCard } from "../../components";
+import { searchPosts } from "../../lib/appwrite";
+import useAppwrite from "../../lib/useAppwrite";
 
 const Search = () => {
   const { query } = useLocalSearchParams();
@@ -16,7 +16,7 @@ const Search = () => {
   }, [query]);
 
   return (
-    <SafeAreaView className="bg-primary h-full">
+    <SafeAreaView className=" h-full">
       <FlatList
         data={posts}
         keyExtractor={(item) => item.$id}
@@ -32,12 +32,8 @@ const Search = () => {
         ListHeaderComponent={() => (
           <>
             <View className="flex my-6 px-4">
-              <Text className="font-pmedium text-gray-100 text-sm">
-                Search Results
-              </Text>
-              <Text className="text-2xl font-psemibold text-white mt-1">
-                {query}
-              </Text>
+              <Text className="font-pmedium  text-sm">Search Results</Text>
+              <Text className="text-2xl font-psemibold  mt-1">{query}</Text>
 
               <View className="mt-6 mb-8">
                 <SearchInput initialQuery={query} refetch={refetch} />
@@ -47,8 +43,8 @@ const Search = () => {
         )}
         ListEmptyComponent={() => (
           <EmptyState
-            title="No Videos Found"
-            subtitle="No videos found for this search query"
+            title="No posts or videos Found"
+            subtitle="No posts or videos found for this search query"
           />
         )}
       />

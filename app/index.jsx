@@ -4,6 +4,7 @@ import { Image, ScrollView, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import { CustomButton, Loader } from "../components";
+import Clock from "../components/Clock";
 import { images } from "../constants";
 import { useGlobalContext } from "../context/GlobalProvider";
 
@@ -13,7 +14,7 @@ const Welcome = () => {
   if (!loading && isLogged) return <Redirect href="/home" />;
 
   return (
-    <SafeAreaView className="bg-primary h-full">
+    <SafeAreaView className=" h-full">
       <Loader isLoading={loading} />
 
       <ScrollView
@@ -28,6 +29,9 @@ const Welcome = () => {
             resizeMode="contain"
           /> */}
 
+          <View className="flex items-center justify-center w-full h-20">
+            <Clock />
+          </View>
           <Image
             source={images.homescreen}
             className="max-w-[380px] w-full h-[298px]"
@@ -35,9 +39,8 @@ const Welcome = () => {
           />
 
           <View className="relative mt-5">
-            <Text className="text-3xl text-white font-bold text-center">
-              Discover Endless{"\n"}
-              Possibilities with {""}
+            <Text className="text-3xl text-primary font-bold text-center">
+              Discover Endless Possibilities with {""}
               <Text className="text-secondary-200">Predictor</Text>
             </Text>
 
@@ -48,7 +51,7 @@ const Welcome = () => {
             />
           </View>
 
-          <Text className="text-sm font-pregular text-gray-100 mt-7 text-center">
+          <Text className="text-sm font-pregular text-primary mt-7 text-center">
             Where Creativity Meets Innovation: Embark on a Journey of Limitless
             Exploration with Predictor
           </Text>

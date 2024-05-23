@@ -20,16 +20,10 @@ const VideoCard = ({ title, creator, avatar, thumbnail, video, prompt }) => {
           </View>
 
           <View className="flex justify-center flex-1 ml-3 gap-y-1">
-            <Text
-              className="font-psemibold text-sm text-white"
-              numberOfLines={1}
-            >
+            <Text className="font-psemibold text-sm " numberOfLines={1}>
               {title}
             </Text>
-            <Text
-              className="text-xs text-gray-100 font-pregular"
-              numberOfLines={1}
-            >
+            <Text className="text-xs  font-pregular" numberOfLines={1}>
               {creator}
             </Text>
           </View>
@@ -62,10 +56,9 @@ const VideoCard = ({ title, creator, avatar, thumbnail, video, prompt }) => {
               }
             }}
           />
-          <View className="flex flex-row gap-3 items-start mt-3">
-            <Text className="text-justify text-gray-100 font-pregular">
-              {prompt}
-            </Text>
+
+          <View className={`flex flex-row gap-3 items-start mt-3`}>
+            <Text className="text-justify  font-pregular">{prompt}</Text>
           </View>
         </>
       ) : (

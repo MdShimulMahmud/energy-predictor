@@ -38,7 +38,7 @@ const SignUp = () => {
   };
 
   return (
-    <SafeAreaView className="bg-primary h-full">
+    <SafeAreaView className="h-full">
       <ScrollView>
         <View
           className="w-full flex justify-center h-full px-4 my-6"
@@ -52,7 +52,7 @@ const SignUp = () => {
             className="w-[110px] h-[100px] rounded-3xl self-left"
           />
 
-          <Text className="text-2xl font-semibold text-white mt-2 font-psemibold">
+          <Text className="text-2xl font-semibold mt-2 font-psemibold">
             Sign Up to Predictor
           </Text>
 
@@ -86,7 +86,7 @@ const SignUp = () => {
           />
 
           <View className="flex justify-center pt-5 flex-row gap-2">
-            <Text className="text-lg text-gray-100 font-pregular">
+            <Text className="text-lg font-pregular">
               Have an account already?
             </Text>
             <Link
